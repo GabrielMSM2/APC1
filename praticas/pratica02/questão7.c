@@ -3,10 +3,10 @@
 int main () {
   float valor_hora_trabalhada = 150.0f;
   int total_horas_trabalhadas = 200;
-  
+
   const float IR = 0.25f;
   const float INSS = 0.11f;
-  
+
   float salario_bruto = (valor_hora_trabalhada * total_horas_trabalhadas);
   float valor_ir = (salario_bruto * IR);
   float valor_inss = (salario_bruto * INSS);
@@ -23,5 +23,5 @@ int main () {
 
 
 
-  
+
   return 0; }
