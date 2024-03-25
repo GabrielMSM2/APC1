@@ -1,12 +1,14 @@
 #include <stdio.h>
+#include <math.h>
 
 int main() {
-  float gb;
+  double gb;
 
   printf("valor em gb: ");
-  int deu_certo = scanf("%f", &gb);
-
-  printf("valor em bytes: %f\n", gb * 1024 * 1024 * 1024);
-
+  int deu_certo = scanf("%lf", &gb);
+  
+  gb = pow(1024, 3) * gb;
+  printf("valor em bytes: %lf\n", gb * pow(1024, 3));
+  
   return 0;
 }
