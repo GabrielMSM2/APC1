@@ -1,20 +1,32 @@
 #include <stdio.h>
 
 int main() {
-
-  int milhares, centenas, dezenas, unidades;
-
-  printf("digite o valor em milhares: ");
-  int deu_certo = scanf("%i", &milhares);
-
-  milhares = milhares * 1000;
-  centenas = milhares / 100;
-  dezenas = milhares % 100;
-  unidades = dezenas % 10;
-
- 
-
-
   
+  int numero, milhar, centena, dezena, unidade, resto;
+
+  printf("insira um numero: ");
+  int deu_certo = scanf("%i", &numero);
+
+  //unidade
+  unidade = numero % 10;
+  
+  //dezena
+  resto = (numero - unidade) / 10;
+  dezena = resto % 10;
+    
+  //centena
+  resto = numero / 100;
+  centena = resto % 10;
+
+  //milhar
+  milhar = numero / 1000; 
+
+  printf("milhar: %i\n", milhar);
+  printf("centena: %i\n", centena);
+  printf("dezena: %i\n", dezena);
+  printf("unidade: %i\n", unidade);
+  
+
+
   return 0;
 }
